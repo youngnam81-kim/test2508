@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e</title>
+    <style>
+      * {
+        border: 1px solid #000;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+      }
+      .left {
+        width: 100px;
+        height: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+      }
+      .logo-top {
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu-section {
+        width: 100px;
+        height: 100%;
+        background-color: #ccc;
+        align-items: right;
+      }
+
+      .link {
+        width: 100px;
+        background-color: #ddd;
+        text-align: center;
+        align-self: stretch;
+      }
+
+      .center {
+        width: 400px;
+        height: 100%;
+        background-color: #f0f0f0;
+      }
+      .right {
+        width: 100%;
+      }
+
+      .logo-bottom {
+        align-self: flex-end;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: pink;
+      }
+
+      .menu-section a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10px;
+      }
+
+      .subMenu {
+        display: none;
+      }
+      .subMenu a {
+        background-color: deepskyblue;
+      }
+
+      .subMenu li:hover a {
+        color: lightpink;
+        background-color: deeppink;
+        font-weight: 600;
+      }
+
+      .menu:hover > a {
+        color: yellow;
+        background-color: blue;
+      }
+      .wrap {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+header {
+    width: 200px;
+    height: 650px;
+    background-color: rgb(247, 243, 179);
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+    border: 1px solid red;
+}
+
+.nav {
+    width: 200px;
+    height: 60px;
+    border: 1px solid red;
+}
+
+/* .nav>ul {
+    padding-left: 14px;
+} */
+
+.nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.subMenu {
+    display: none;
+}
+.subMenu a {
+    background-color: deepskyblue;
+}
+
+.subMenu li:hover a {
+    color: lightpink;
+    background-color: deeppink;
+    font-weight: 600;
+}
+
+.menu:hover>a {
+    color: yellow;
+    background-color: blue;
+}
+
+.main {
+    width: 800px;
+    height: 650px;
+    background-color: rgb(251, 245, 72);
+}
+
+.slideContent {
+    height: 350px;
+    background-color: aquamarine;
+}
+
+.content {
+    height: 200px;
+    background-color: aqua;
+
+    display: flex;
+}
+
+.con1 {
+    width: 33.33%;
+    border: 3px dotted red;
+}
+
+.con2 {
+    width: 33.33%;
+    border: 3px solid red;
+}
+
+.con3 {
+    width: 33.33%;
+    border: 3px dotted red;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(98, 209, 172);
+
+    display: flex;
+    align-items: center;
+}
+
+.f1 {
+    width: 620px;
+    height: 100px;
+    border: 3px dotted red;
+}
+
+.f_right {
+    width: 180px;
+    height: 100px;
+}
+
+.f2 {
+    height: 50%;
+    border: 3px dotted blue;
+}
+
+.f3 {
+    height: 50%;
+    border: 3px dotted blue;
+}
+
+.content-area{
+  font-size: 12px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="logo-top">logo t</div>
+      <div class="menu-section">
+        <ul>
+          <li class="menu">
+            <a href="#">A메뉴</a>
+            <ul class="subMenu">
+              <li><a href="#">A1서브</a></li>
+              <li><a href="#">A2서브</a></li>
+              <li><a href="#">A3서브</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <a href="#">B메뉴</a>
+            <ul class="subMenu">
+              <li><a href="#">B1서브</a></li>
+              <li><a href="#">B2서브</a></li>
+              <li><a href="#">B3서브</a></li>
+              <li><a href="#">B4서브</a></li>
+              <li><a href="#">B5서브</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <a href="#">C메뉴</a>
+            <ul class="subMenu">
+              <li><a href="#">C1서브</a></li>
+              <li><a href="#">C2서브</a></li>
+              <li><a href="#">C3서브</a></li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <div class="link">aaa | ddd</div>
+      </div>
+      <div class="logo-bottom">logo b</div>
+    </div>
+    <div class="center">
+       <div class="tab-container">
+        <button class="tab-button active" onclick="showTab('notice')">
+          📌 공지사항
+        </button>
+        <button class="tab-button" onclick="showTab('board')">📝 게시판</button>
+      </div>
+      <div class="content-area">
+            <!-- 공지사항 탭 -->
+            <div id="notice-tab" class="tab-content active">
+                <h3>📌 공지사항</h3>
+                
+                <div class="notice-item">
+                    <div class="meta">
+                        <span>🏢 관리자</span>
+                        <span>2024-08-06</span>
+                    </div>
+                    <h3><span class="badge">중요</span> 웹사이트 개편 안내</h3>
+                    <p>웹사이트 사용자 경험 개선을 위한 전면 개편 작업을 진행합니다. 일시적으로 서비스 이용에 불편을 드릴 수 있습니다.</p>
+                </div>
+
+                <div class="notice-item">
+                    <div class="meta">
+                        <span>🔧 시스템</span>
+                        <span>2024-08-05</span>
+                    </div>
+                    <h3>정기 서버 점검 안내</h3>
+                    <p>매주 화요일 새벽 2시~4시까지 정기 서버 점검이 진행됩니다. 해당 시간에는 서비스 이용이 제한됩니다.</p>
+                </div>
+
+            </div>
+
+            <!-- 게시판 탭 -->
+            <div id="board-tab" class="tab-content">
+                <h3>📝 자유게시판</h3>
+                
+                <div class="board-list">
+                    <div class="board-header">
+                        <div>제목</div>
+                        <div>작성자</div>
+                        <div>조회수</div>
+                        <div>작성일</div>
+                    </div>
+                    
+                    <div class="board-item">
+                        <div class="board-title">🔥 웹 개발 초보자를 위한 팁 공유합니다</div>
+                        <div class="board-author">김개발</div>
+                        <div class="board-views">245</div>
+                        <div class="board-date">08-06</div>
+                    </div>
+                    
+                    <div class="board-item">
+                        <div class="board-title">HTML/CSS 질문이 있어요!</div>
+                        <div class="board-author">이학습</div>
+                        <div class="board-views">89</div>
+                        <div class="board-date">08-06</div>
+                    </div>
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="right">d</div>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      document.getElementById("notice-tab").style.display = "block";
+      document.getElementById("board-tab").style.display = "none";
+      $(".menu").hover(
+        function () {
+          // over
+          $(this).find(".subMenu").stop().slideDown();
+        },
+        function () {
+          // out
+          $(".subMenu").stop().slideUp();
+        }
+      );
+
+      function showTab(tabName) {
+        // 모든 탭 버튼에서 active 클래스 제거
+        const tabButtons = document.querySelectorAll(".tab-button");
+        tabButtons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        if(tabName === 'notice') {
+        //   $("#box1").show();
+        // $("#box2").hide();
+          document.getElementById("notice-tab").style.display = "block";
+          document.getElementById("board-tab").style.display = "none";
+          // document.querySelector('.notice-tab').classList.add("active");  
+        } else {
+          document.getElementById("board-tab").style.display = "block";
+          document.getElementById("notice-tab").style.display = "none";
+          // document.querySelector('.board-tab').classList.add("active");  
+        }
+
+        // 모든 탭 콘텐츠 숨기기
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // 클릭된 탭 버튼에 active 클래스 추가
+        event.target.classList.add("active");
+
+        // 해당 탭 콘텐츠 표시
+        document.getElementById(tabName + "-tab").classList.add("active");
+
+        // 클릭 효과 애니메이션
+         event.target.style.transform = "scale(0.95)";
+        // setTimeout(() => {
+        //   event.target.style.transform = "";
+        // }, 150);
+
+        // console.log(`${tabName} 탭이 활성화되었습니다!`);
+      }
+
+      // 키보드 단축키 (탭 전환)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey) {
+              alert('1');
+                if (e.key === '1') {
+                    e.preventDefault();
+                    document.querySelector('.tab-button').click();
+                } else if (e.key === '2') {
+                    e.preventDefault();
+                    document.querySelectorAll('.tab-button')[1].click();
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

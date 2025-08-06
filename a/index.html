@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 1px solid #000;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+        background-color: #ffffff;
+        text-align: center;
+        padding: 0;
+      }
+      #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #logo img {
+        float: left;
+        height: 100px;
+        width: 100px;
+        border-radius: 10%;
+      }
+
+      .b-section img {
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .horizontal-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .horizontal-list li {
+        margin: 0 40px;
+      }
+
+      #menu {
+        float: right;
+        height: 100px;
+        display: flex;
+        align-items: center;
+      }
+      .b-section {
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .c-section {
+        width: 1200px;
+        height: 200px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .c12 {
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+        padding: 0;
+        float: left;
+      }
+      .c12-header {
+        width: 400px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+      }
+      .c1-button {
+        width: 100px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+      }
+      .c2-button {
+        width: 100px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+      }
+      .c12-content {
+        width: 400px;
+        height: 170px;
+        margin: 0;
+        padding: 0;
+      }
+      .c3 {
+        width: 400px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+      .c4 {
+        width: 400px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+
+      .footer {
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .d1 {
+        width: 200px;
+        height: 100px;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+      .d2 {
+        width: 800px;
+        height: 100px;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+      .d3 {
+        width: 200px;
+        height: 100px;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div id="logo"><img src="./img/logo.png" alt="Logo" /></div>
+      <div id="menu">
+        <ul class="horizontal-list">
+          <li>
+            <a onclick="subMenu()"><span>탑</span></a>
+          </li>
+          <li>
+            <a onclick="subMenu()"><span>아우터</span></a>
+          </li>
+          <li>
+            <a onclick="subMenu()"><span>팬츠</span></a>
+          </li>
+          <li>
+            <a onclick="subMenu()"><span>악세서리</span></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="b-section">
+      <img src="./img/b1.png" alt="이미지" />
+    </div>
+    <div class="c-section">
+      <div class="c12">
+        <div class="c12-header">
+          <div class="c1-button">공지사항</div>
+          <div class="c2-button">갤러리</div>
+        </div>
+        <div class="c12-content">컨텐츠</div>
+      </div>
+      <div class="c3">배너</div>
+      <div class="c4">바로가기</div>
+    </div>
+    <div class="footer">
+      <div class="d1">로고</div>
+      <div class="d2">카피라이트</div>
+      <div class="d3">SNS</div>
+    </div>
+    <script>
+      function subMenu() {
+        alert("서브메뉴");
+      }
+    </script>
+  </body>
+</html>
