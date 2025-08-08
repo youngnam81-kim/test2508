@@ -317,6 +317,22 @@ footer {
     <script src="../js/jquery-3.7.1.min.js"></script>
 
     <script>
+      $(function () {
+            const $slidecon = $('.slidecon');
+            const slideWidth = 1200;
+            const slideSpeed = 1000;
+            const delay = 2000;
+
+            function infiniteSlide() {
+                $slidecon.animate({ left: `-${slideWidth}px` }, slideSpeed, function () {
+                    $slidecon.append($slidecon.find('img').first());
+                    $slidecon.css('left', 0);
+                });
+            }
+
+            setInterval(infiniteSlide, delay);
+        });
+        
       document.getElementById("notice-tab").style.display = "block";
       document.getElementById("board-tab").style.display = "none";
       $(".menu").hover(

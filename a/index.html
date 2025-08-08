@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
       * {
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -156,6 +156,31 @@
         display: inline-block;
         width: 100px;
       }
+
+      .slide {
+        width: 1200px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      .slidecon {
+        display: flex;
+        position: relative;
+        left: 0;
+        width: max-content;
+      }
+
+      .slidecon img {
+        width: 1200px;
+        height: 300px;
+        flex-shrink: 0;
+      }
+
+      .slidel,
+      .slider {
+        margin-top: 125px;
+      }
     </style>
   </head>
   <body>
@@ -176,11 +201,39 @@
             <a onclick="subMenu()"><span>악세서리</span></a>
           </li>
         </ul>
+        <!-- <div class="submenu">
+          <a href="#">블라우스</a>
+          <a href="#">티</a>
+          <a href="#">셔츠</a>
+          <a href="#">니트</a>
+
+          <a href="#">자켓</a>
+          <a href="#">코트</a>
+          <a href="#">가디건</a>
+          <a href="#">머플러</a>
+
+          <a href="#">청바지</a>
+          <a href="#">짧은바지</a>
+          <a href="#">머플러</a>
+          <a href="#">청바지</a>
+
+          <a href="#">귀고리</a>
+          <a href="#">목걸이</a>
+          <a href="#">반지</a>
+          <a href="#">팔찌</a>
+        </div> -->
       </div>
     </header>
     <div class="b-section">
-      <img src="./img/b1.png" alt="이미지" />
+      <div class="slide">
+        <div class="slidecon">
+          <img src="./img/b1.PNG" alt="1" />
+          <img src="./img/b2.PNG" alt="2" />
+          <img src="./img/b3.PNG" alt="3" />
+        </div>
+      </div>
     </div>
+
     <div class="c-section">
       <div class="c12">
         <div class="c12-header">
@@ -197,10 +250,29 @@
       <div class="d2">카피라이트</div>
       <div class="d3">SNS</div>
     </div>
+    <script src="../js/jquery-3.7.1.min.js"></script>
     <script>
       function subMenu() {
         alert("서브메뉴");
       }
+
+      const $slidecon = $(".slidecon");
+      const slideWidth = 1200;
+      const slideSpeed = 1000;
+      const delay = 2000;
+
+      function infiniteSlide() {
+        $slidecon.animate(
+          { left: `-${slideWidth}px` },
+          slideSpeed,
+          function () {
+            $slidecon.append($slidecon.find("img").first());
+            $slidecon.css("left", 0);
+          }
+        );
+      }
+
+      setInterval(infiniteSlide, delay);
     </script>
   </body>
 </html>
